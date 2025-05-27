@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../Contexts/AuthContext/AuthContext';
 import signInLottie from '../../assets/Lotties/signIn.json';
 import { Link } from 'react-router';
+import SocialLogin from '../Shared/SocialLogin';
 
 const SignIn = () => {
 
@@ -32,8 +33,8 @@ const SignIn = () => {
                 <div className="hidden lg:flex justify-center">
                     <Lottie animationData={signInLottie} loop={true} style={{ width: '100%', maxWidth: '550px' }} />
                 </div>
-                <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
-                    <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">Login to your account</h1>
+                <div className="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-md">
+                    <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Login to your account</h1>
                     <form onSubmit={handleSignIn} className="space-y-4">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
@@ -75,8 +76,13 @@ const SignIn = () => {
                         >
                             Login
                         </button>
-                        <small>Don't have an account? <Link className='text-blue-600 underline' to="/register">Register</Link></small>
                     </form>
+                    <SocialLogin></SocialLogin>
+
+                    <p className="mt-6 text-sm text-center text-gray-600">
+                        Don't have an account?{' '}
+                        <Link className='text-blue-600 underline' to="/register">Register</Link>
+                    </p>
                 </div>
             </div>
         </div>

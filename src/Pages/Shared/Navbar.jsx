@@ -45,13 +45,13 @@ const Navbar = () => {
                 {
                     user ?
                         <>
-                            <button onClick={handleSingOut} className="btn">LogOut</button>
+                            <button onClick={handleSingOut} className="btn bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition duration-300 font-medium">LogOut</button>
                         </>
                         :
-                        <>
-                            <NavLink to="/register" className="btn">Register</NavLink>
-                            <NavLink to="/signin" className="btn">SignIn</NavLink>
-                        </>
+                        <div className='flex gap-2'>
+                            <NavLink to="/register" className="btn bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition duration-300 font-medium">Register</NavLink>
+                            <NavLink to="/signin" className="btn bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition duration-300 font-medium">SignIn</NavLink>
+                        </div>
                 }
             </div>
         </div>
