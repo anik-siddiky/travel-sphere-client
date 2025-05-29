@@ -26,7 +26,7 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-100 to-white flex items-center justify-center px-6 py-12">
+        <div className="min-h-screen  flex items-center justify-center px-6 py-12">
             <div className="grid lg:grid-cols-2 items-center gap-12 max-w-6xl w-full">
                 <div className="hidden lg:flex justify-center">
                     <Lottie animationData={registerLottie} loop style={{ width: '100%', maxWidth: '400px' }} />

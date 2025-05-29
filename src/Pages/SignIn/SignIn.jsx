@@ -3,11 +3,13 @@ import Lottie from 'lottie-react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../Contexts/AuthContext/AuthContext';
 import signInLottie from '../../assets/Lotties/signIn.json';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../Shared/SocialLogin';
 
 const SignIn = () => {
-
+    const location = useLocation();
+    const from = location.state || "/";
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const { signInUser } = useContext(AuthContext);
 
@@ -21,6 +23,7 @@ const SignIn = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
+                navigate(from)
             })
             .catch(error => {
                 console.log(error);
@@ -28,7 +31,7 @@ const SignIn = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-100 to-white flex items-center justify-center px-4">
+        <div className="min-h-screen flex items-center justify-center px-4">
             <div className="grid lg:grid-cols-2 items-center gap-10 max-w-5xl w-full">
                 <div className="hidden lg:flex justify-center">
                     <Lottie animationData={signInLottie} loop={true} style={{ width: '100%', maxWidth: '550px' }} />
@@ -77,7 +80,7 @@ const SignIn = () => {
                             Login
                         </button>
                     </form>
-                    <SocialLogin></SocialLogin>
+                    <SocialLogin from={from}></SocialLogin>
 
                     <p className="mt-6 text-sm text-center text-gray-600">
                         Don't have an account?{' '}
