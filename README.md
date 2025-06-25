@@ -1,12 +1,12 @@
-# 🌍 Travel Sphere - Client Side
+# Travel Sphere - Client Side
 
 A sleek, modern travel platform designed for Bangladeshi explorers. Users can browse travel packages, explore destinations, and manage their trip experiences with a responsive and smooth UI.
 
-Live Site 👉 [travelspherebangladesh.web.app](https://travelspherebangladesh.web.app/)
+Live Site: [travelspherebangladesh.web.app](https://travelspherebangladesh.web.app/)
 
 ---
 
-## 🛠️ Main Technologies
+## Main Technologies
 
 - **React** – SPA and component-based UI
 - **React Router** – Client-side routing
@@ -19,7 +19,7 @@ Live Site 👉 [travelspherebangladesh.web.app](https://travelspherebangladesh.w
 
 ---
 
-## ⭐ Key Features
+## Key Features
 
 - User authentication (login/register with Firebase)
 - Dynamic routing and protected routes
@@ -30,7 +30,7 @@ Live Site 👉 [travelspherebangladesh.web.app](https://travelspherebangladesh.w
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 Here are the core dependencies used:
 
