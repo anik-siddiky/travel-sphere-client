@@ -43,3 +43,15 @@ Here are the core dependencies used:
 "lottie-react": ^2.4.1
 "daisyui": ^5.0.37
 "sweetalert2": ^11.22.0
+
+
+
+## 🖥️ Getting Started (Run Locally)
+
+To run the project on your local machine:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/anik-siddiky/travel-sphere-client.git
+cd travel-sphere-client
